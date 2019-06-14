@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.page-header {
+  width: 100%;
+  /* border: 1px solid red; */
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: #1D3557;
+  color: white;
+  font-family: 'Lobster', cursive;
+}
+.form-container {
+  border: 1px solid #c4c4c4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  border-radius: 10px;
+  height: 300px;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+.form-container h1 {
+  margin-bottom: 2rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.form input {
+  width: 68%;
+  height: 2.4rem;
+  margin-bottom: 0.4rem;
+  border: 1px solid #c4c4c4;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+.form button {
+  width: 71%;
+  height: 2.5rem;
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  background: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.form button:hover {
+  background: rgba(30, 144, 255, 0.5);
+  cursor: pointer;
+}
+.subnav {
+  width: 100%;
+  /* border: 1px solid red; */
+  height: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-bottom: 1px solid #c4c4c4;
+}
+.navlink {
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 4rem;
+  color: #1E90FF;
+}
+.navlink:hover {
+  color: rgba(30, 144, 255, 0.5);
+}
+.logout-btn {
+  border: 1px solid #c4c4c4;
+  height: 2rem;
+  border-radius: 5px;
+  width: 5rem;
+  font-size: 0.8rem;
+  outline: none;
+}
+.logout-btn:hover {
+  cursor: pointer;
+  background: #efefef;
+}
+.ind-joke {
+  border: 1px solid #c4c4c4;
+  font-size: 1rem;
+  padding: 2rem 0;
+  border-radius: 5px;
+}
+.error-msg {
+  border: 1px solid #FF1654;
+  width: 50%;
+  margin-top: 3rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  color: #FF1654;
+  background: rgba(255, 22, 84, 0.05);
+}
+.error-msg i {
+  margin-right: 0.4rem;
+}
