@@ -33,7 +33,7 @@ export default class Login extends React.Component {
         axios.post(endpoint, this.state)
         .then(res => {
             localStorage.setItem('jwt', res.data.token)
-            this.props.history.push('/api/jokes')
+            this.props.history.push('/jokes')
         })
         .catch(err => {
             console.error(err)

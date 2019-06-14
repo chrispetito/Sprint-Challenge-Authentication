@@ -45,7 +45,7 @@ export default class SignUp extends React.Component {
       .post(endpoint, this.state)
       .then(res => {
         localStorage.setItem("jwt", res.data.token);
-        this.props.hisory.push("/api/jokes");
+        this.props.hisory.push("/jokes");
       })
       .catch(err => {
         console.error(err);
