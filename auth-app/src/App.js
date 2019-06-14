@@ -11,13 +11,13 @@ class App extends React.Component {
     return (
       <div className="App">
       <div className='page-header'>Authentication Sprint Challenge</div>
-        <header className="App-header">
+        <header className="subnav">
           <nav>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/jokes">Jokes</NavLink>
-            <NavLink to="/signup">Sign Up</NavLink>
+            <NavLink className='navlink' to="/login">Login</NavLink>
+            <NavLink className='navlink' to="/jokes">Jokes</NavLink>
+            <NavLink className='navlink' to="/signup">Sign Up</NavLink>
           </nav>
-          <button onClick={this.logout}>Log Out</button>
+          <button className='logout-btn' onClick={this.logout}>Log Out</button>
         </header>
         <Route path="/login" component={Login} />
         <Route path="/jokes" component={JokeList} />

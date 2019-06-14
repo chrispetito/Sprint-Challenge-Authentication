@@ -79,3 +79,37 @@
   border: none;
   border-radius: 5px;
 }
+.form button:hover {
+  background: rgba(30, 144, 255, 0.5);
+  cursor: pointer;
+}
+.subnav {
+  width: 100%;
+  /* border: 1px solid red; */
+  height: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-bottom: 1px solid #c4c4c4;
+}
+.navlink {
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 4rem;
+  color: #1E90FF;
+}
+.navlink:hover {
+  color: rgba(30, 144, 255, 0.5);
+}
+.logout-btn {
+  border: 1px solid #c4c4c4;
+  height: 2rem;
+  border-radius: 5px;
+  width: 5rem;
+  font-size: 0.8rem;
+}
+.logout-btn:hover {
+  cursor: pointer;
+  background: #efefef;
+}

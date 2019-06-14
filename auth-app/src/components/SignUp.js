@@ -9,9 +9,9 @@ export default class SignUp extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='form-container'>
         <h1>Sign Up</h1>
-        <form onSubmit={this.signup}>
+        <form className='form' onSubmit={this.signup}>
           <input
             required
             placeholder="username"
@@ -26,6 +26,7 @@ export default class SignUp extends React.Component {
             value={this.state.password}
             onChange={this.handleChanges}
           />
+          <button>Sign Up</button>
         </form>
       </div>
     );

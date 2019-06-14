@@ -14,7 +14,7 @@ class JokeList extends React.Component {
             <div>
                 {this.state.jokes.map(joke => {
                     return (
-                        <h4>{joke.joke}</h4>
+                        <h4 key={joke.id}>{joke.joke}</h4>
                     )
                 })}
             </div>
