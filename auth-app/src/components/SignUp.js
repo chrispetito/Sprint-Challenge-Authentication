@@ -11,7 +11,7 @@ export default class SignUp extends React.Component {
     return (
       <div>
         <h1>Sign Up</h1>
-        <form>
+        <form onSubmit={this.signup}>
           <input
             required
             placeholder="username"

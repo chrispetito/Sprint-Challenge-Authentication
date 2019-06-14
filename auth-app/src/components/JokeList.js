@@ -1,6 +1,9 @@
 import React from 'react' 
 import axios from 'axios'
 
+import requireAuth from '../auth/requireAuth'
+import '../auth/axiosIntercept'
+
 class JokeList extends React.Component {
     state = {
         jokes: []
