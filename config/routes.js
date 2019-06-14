@@ -1,8 +1,10 @@
 const axios = require('axios');
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
 const { authenticate } = require('../auth/authenticate');
 const users = require('./model')
+const secrets = require('./secrets')
 
 module.exports = server => {
   server.post('/api/register', register);
@@ -25,6 +27,30 @@ function register(req, res) {
 
 function login(req, res) {
   // implement user login
+  let { username, password } = req.body
+  users.findBy({ username }).first().then(user => {
+    if (user && bcrypt.compareSync(password, user.password)) {
+      const token = generateToken(user)
+      res.status(200).json({ message: `Welcome ${user.username}! Have a token!`, token})
+    } else {
+      res.status(401).json({ message: 'You shall not pass!'})
+    }
+  })
+  .catch(err => {
+    res.status(500).json(err)
+  })
+}
+
+function generateToken(user) {
+  const payload = {
+    subject: user.id,
+    username: user.username
+  }
+  const options = {
+    expiresIn: '1d'
+  }
+
+  return jwt.sign(payload, secrets.jwtSecret, options)
 }
 
 function getJokes(req, res) {
